@@ -11,7 +11,7 @@
                 <th>Unit Number</th>
                 <th>Year</th>
                 <th>Notes</th>
-                <th>Action</th>
+                <th>Action</th> 
             </tr>
         </thead>
         <tbody>
@@ -29,6 +29,7 @@
                                 onclick="return confirm('Are you sure you want to delete this truck?')">Delete</button>
                         </form>
                         <a href="{{ route('trucks.show', $truck->id) }}" class="btn btn-sm btn-primary">Show</a>
+                        <a href="{{ route('subunits.assign-subunit', $truck->id) }}" class="btn btn-sm btn-primary">Assign Subunit</a>
                     </td>
                 </tr>
             @endforeach

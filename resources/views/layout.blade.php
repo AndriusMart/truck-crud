@@ -9,6 +9,12 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="d-flex justify-content-end mt-4">
+            <a href="{{ route('trucks.index') }}" class="btn btn-sm btn-primary">Trucks</a>
+        </div>
+    </div>
+
     <div class="container mt-5">
         @yield('content')
     </div>
@@ -16,13 +22,13 @@
     <div class="alert alert-success">
         {{ session('success') }}
     </div>
-@endif
+    @endif
 
-@if (session('error'))
+    @if (session('error'))
     <div class="alert alert-danger">
         {{ session('error') }}
     </div>
-@endif
+    @endif
 </body>
 
 </html>

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('truck_subunits', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('main_truck_id')->constrained('trucks');
+            $table->foreignId('main_truck_id')->constrained('trucks')->onDelete('cascade');;
             $table->foreignId('subunit_truck_id')->constrained('trucks');
             $table->date('start_date');
             $table->date('end_date');
